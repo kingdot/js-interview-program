@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .main{
+            /*触发main的BFC，BFC之间不会互相覆盖*/
+            overflow: hidden;
+            background: red;
+        }
+        .left{
+            float: left;
+            width: 200px;
+            background: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+<div class="left">left</div>
+<div class="main">main</div>
+</body>
+</html>

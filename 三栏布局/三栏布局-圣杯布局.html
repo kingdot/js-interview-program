@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>圣杯布局</title>
+    <style>
+        /*这个wrapper至关重要，因为子元素要设为100%*/
+        .wrapper{
+            /*margin: 0 300px 0 200px;   // 使用margin同样可以 */
+            padding: 0 300px 0 200px;
+        }
+        .main, .left, .right{
+            float: left;
+        }
+        .main{
+            width: 100%;
+            background: red;
+        }
+        .left{
+            position: relative;
+            left: -200px;
+            width: 200px;
+            margin-left: -100%;
+            background: antiquewhite;
+        }
+        .right{
+            position: relative;
+            right: -300px;
+            width: 300px;
+            margin-left: -300px;
+            background: aqua;
+        }
+    </style>
+</head>
+<body>
+<!--这个wrapper很重要-->
+<div class="wrapper">
+    <div class="main">main</div>
+    <div class="left">left</div>
+    <div class="right">right</div>
+</div>
+
+</body>
+</html>

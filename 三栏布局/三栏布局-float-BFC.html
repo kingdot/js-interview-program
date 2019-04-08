@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .main{
+            /*不让其触发BFC，为了不使用被左右BFC占据的行空间，设置左右margin*/
+            margin-left: 200px;
+            margin-right: 300px;
+            background: red;
+        }
+        .left{
+            float: left;
+            width: 200px;
+            background: antiquewhite;
+        }
+        .right{
+            float: right;
+            width: 300px;
+            background: aqua;
+        }
+    </style>
+</head>
+<body>
+<div class="left">left</div>
+<div class="right">right</div>
+<!--注意：这里的main一定要放在最后，它利用了浮动元素不占据块空间的特性，ta前面的都必须为BFC-->
+<div class="main">main</div>
+</body>
+</html>

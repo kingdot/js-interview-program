@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三栏布局</title>
+    <style>
+        /* 负margin有类似absolute或者translate的感觉 */
+        .main-wrapper, .left, .right{
+            float: left;
+        }
+        .main-wrapper{
+            width: 100%;
+        }
+        .main-wrapper .main{
+            margin: 0 300px 0 200px;
+            background: red;
+        }
+        .left{
+            width: 200px;
+            margin-left: -100%;
+            background: antiquewhite;
+        }
+        .right{
+            width: 300px;
+            margin-left: -300px;
+            background: aqua;
+        }
+
+    </style>
+</head>
+<body>
+<div class="main-wrapper"><div class="main">main</div></div>
+<div class="left">left</div>
+<div class="right">right</div>
+</body>
+</html>

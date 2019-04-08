@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            /*不让其触发BFC，为了不使用被左右BFC占据的行空间，设置左右margin*/
+            margin-left: 200px;
+            margin-right: 300px;
+            /*设置最小宽度，保证效果*/
+            min-width: 100px;
+            background: red;
+        }
+        .left{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            background: antiquewhite;
+        }
+        .right{
+            position: absolute;
+            width: 300px;
+            top: 0;
+            right: 0;
+            background: aqua;
+        }
+    </style>
+</head>
+<body>
+<div class="left">left</div>
+<div class="main">main</div>
+<div class="right">right</div>
+</body>
+</html>
