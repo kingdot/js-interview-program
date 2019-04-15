@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .wrapper{
+            position: relative;
+        }
+        .left{
+            position: absolute;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background: blue;
+        }
+        .right{
+            position: absolute;
+            left: 100px;
+            right: 0; /*实现自适应的关键步骤*/
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="left">left</div>
+    <div class="right">right</div>
+</div>
+</body>
+</html>

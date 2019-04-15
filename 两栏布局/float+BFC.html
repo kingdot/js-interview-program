@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .wrapper{
+            overflow: hidden;
+        }
+        .left{
+            float: left;
+            width: 100px;
+            background: blue;
+        }
+        .right{
+            overflow: hidden; /*触发BFC， IE使用：*zoom：1*/
+            /*width: 100%;  //不需要设置宽度！*/
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="left">left</div>
+    <div class="right">right</div>
+</div>
+</body>
+</html>
