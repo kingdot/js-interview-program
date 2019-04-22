@@ -16,7 +16,7 @@ function heapSort(arr) {
     for (let i = 0; i < arr.length; i++) {
         // 交换元素(数组中有两个元素)
         [arr[0], arr[arr.length - 1 - i]] = [arr[arr.length - 1 - i], arr[0]];
-        // 因为堆顶被换了，因此从堆顶到倒数第i个开始调整堆，
+        // 因为堆顶被换了，因此每次排序的对象都是从堆顶到倒数第i个元素构成的树。且执行完它之后又成为了一个有序堆。
         adjustHeap(arr, 0, arr.length - 2 - i);
     }
 
