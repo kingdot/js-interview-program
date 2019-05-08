@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="initial-scale=0.5">
+    <style>
+        .parent{
+            /*width: 100px;*/
+            width: 100%;
+            height: 100px;
+            /*background-color: aqua;*/
+            border: 1px solid #000;
+        }
+        .child{
+            width: 20px;
+            height: 20px;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+<div class="parent">
+    <div class="child">
+        child
+    </div>
+</div>
+<script>
+    console.log('layout:'+document.documentElement.clientWidth, 'visual:'+window.innerWidth);
+
+    // (function (doc, win) {
+    //     var docEl = win.document.documentElement;
+    //     var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+    //     var metaEl = doc.querySelector('meta[name="viewport"]');
+    //     var dpr = 0;
+    //     var scale = 0;
+    //
+    //     // 对iOS设备进行dpr的判断，对于Android系列，始终认为其dpr为1
+    //     if (!dpr && !scale) {
+    //         var isAndroid = win.navigator.appVersion.match(/android/gi);
+    //         var isIPhone = win.navigator.appVersion.match(/[iphone|ipad]/gi);
+    //         var devicePixelRatio = win.devicePixelRatio;
+    //
+    //         if(isIPhone) {
+    //             dpr = devicePixelRatio;
+    //         } else {
+    //             dpr = 1;
+    //         }
+    //
+    //         scale = 1 / dpr;
+    //     }
+    //
+    //     /**
+    //      * ================================================
+    //      *   设置data-dpr和viewport
+    //      × ================================================
+    //      */
+    //
+    //     docEl.setAttribute('data-dpr', dpr);
+    //     // 动态改写meta:viewport标签
+    //     if (!metaEl) {
+    //         metaEl = doc.createElement('meta');
+    //         metaEl.setAttribute('name', 'viewport');
+    //         metaEl.setAttribute('content', 'width=device-width, initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+    //         document.documentElement.firstElementChild.appendChild(metaEl);
+    //     } else {
+    //         metaEl.setAttribute('content', 'width=device-width, initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+    //     }
+    //
+    // })(document, window);
+</script>
+</body>
+</html>

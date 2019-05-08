@@ -25,13 +25,13 @@ function JSONP(url, data) {
 
         // 关键步骤，定义在window上
         // 回调函数内部resolve，并移除节点
-        window[functionName] = (info) => {
+        window[functionName] = function(info){
             delete window[functionName];
             document.body.removeChild(script);
             resolve(info);
         };
 
-        script.onerror = () => {
+        script.onerror = function(){
             delete window[functionName];
             document.body.removeChild(script);
             reject('error');

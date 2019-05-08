@@ -130,3 +130,6 @@ new testb(); // testB {} [Arguments] { '0': 2 }
 // 返回函数的继承测试
 let child = new testb();
 console.log(child.b); // 1
+
+
+// 参考链接；https://juejin.im/post/5ae186986fb9a07aca79dc36
