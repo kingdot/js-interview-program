@@ -20,6 +20,7 @@ function debounce(cb, time) {
 // 节流
 // 简易版本
 function throttle(cb, time) {
+    // 一个flag即可
     let flag = true;
     let timer = null;
     return function () {
